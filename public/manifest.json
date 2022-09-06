@@ -7,8 +7,13 @@
     "default_popup": "index.html",
     "default_title": "Open"
   },
-  "permissions": ["scripting"],
+  "permissions": ["scripting", "storage"],
   "host_permissions": [
     "https://www.netflix.com/*"
-  ]
+  ],
+  "content_scripts": [{
+    "css": ["styles.css"],
+    "js": ["content.js"],
+    "matches": ["https://www.netflix.com/*"]
+  }]
 }
